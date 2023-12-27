@@ -1,4 +1,4 @@
-package murraco.configuration;
+package scclabs.configuration;
 
 import java.util.Arrays;
 import java.util.Collections;

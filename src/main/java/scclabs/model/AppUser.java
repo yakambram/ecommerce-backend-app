@@ -1,4 +1,4 @@
-package murraco.model;
+package scclabs.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

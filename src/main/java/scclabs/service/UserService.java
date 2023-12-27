@@ -1,4 +1,4 @@
-package murraco.service;
+package scclabs.service;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,10 +10,10 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import murraco.exception.CustomException;
-import murraco.model.AppUser;
-import murraco.repository.UserRepository;
-import murraco.security.JwtTokenProvider;
+import scclabs.exception.CustomException;
+import scclabs.model.AppUser;
+import scclabs.repository.UserRepository;
+import scclabs.security.JwtTokenProvider;
 
 @Service
 @RequiredArgsConstructor
