@@ -134,7 +134,7 @@ An example of payload could be:
 ```json
 {
   "sub": "1234567890",
-  "name": "John Doe",
+  "name": "Yakambram Kommu",
   "admin": true
 }
 ```
@@ -216,10 +216,9 @@ This demo is currently using an H2 database called **test_db** so you can run it
 ```yml
 spring:
   datasource:
-    url: jdbc:h2:mem:test_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    # url: jdbc:mysql://localhost:3306/user_db
-    username: root
-    password: root
+    url: jdbc:postgresql://localhost:5432/ecommerce_db
+    username: postgres
+    password: postgres
   tomcat:
     max-wait: 20000
     max-active: 50
@@ -227,14 +226,14 @@ spring:
     min-idle: 15
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-        # dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
         id:
           new_generator_mappings: false
+
 ```
 
 ## Core Code
@@ -394,4 +393,4 @@ $ curl -X GET http://localhost:8080/users/me -H 'Authorization: Bearer <JWT_TOKE
 - Report issues
 - Open pull request with improvements
 - Spread the word
-- Reach out to me directly at <mauriurraco@gmail.com>
+- Reach out to me directly at <yakambram.kommu@gmail.com>
